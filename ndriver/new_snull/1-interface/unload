@@ -1,0 +1,5 @@
+#!/bin/sh
+
+ifconfig sn down
+#ifconfig sn1 down
+rmmod new_snull

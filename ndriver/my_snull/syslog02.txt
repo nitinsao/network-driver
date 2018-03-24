@@ -1,0 +1,1695 @@
+sudo insmod my_snull.ko
+
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.867310] mysnull_init_module called###
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.867322] snull_init called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.867328] snull_rx_ints called by sn0, enable = 1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.867332] snull_rx_ints called by sn0, enable = 1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.867334] snull_setup_pool called by sn0
+
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.867343] snull_init called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.867346] snull_rx_ints called by sn0, enable = 1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.867348] snull_rx_ints called by sn0, enable = 1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.867351] snull_setup_pool called by sn0
+
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.867889] snull_stats called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.868399] snull_ioctl called by sn0
+Dec  2 01:07:49 nitinsao-Aspire NetworkManager[801]: <info>  [1512157069.4338] (sn0): driver WEXT version too old (got 0, expected >= 21)
+Dec  2 01:07:49 nitinsao-Aspire NetworkManager[801]: <warn>  [1512157069.4339] (sn0) failed to initialize Wi-Fi driver for ifindex 8
+Dec  2 01:07:49 nitinsao-Aspire NetworkManager[801]: <warn>  [1512157069.4339] manager: sn0: factory failed to create device: Device factory NMWifiFactory failed to create device sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.868689] snull_ioctl called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.872336] snull_stats called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.872384] register_netdev() Done.
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.872990] snull_ioctl called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.873290] snull_ioctl called by sn1
+
+
+
+sudo ifconfig sn0 local0
+sudo ifconfig sn1 local1
+
+
+
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.876011] snull_open called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.876033] snull_stats called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.876666] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.876677] snull_tx called by sn0, data : 33, len : 70 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.876680] snull_hw_tx called by sn0, buf : 33, len : 70
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.876683] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.876687] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.876688] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.876691] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.876693] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.876696] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.876702] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.876704] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.877578] snull_ioctl called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.877640] snull_ioctl called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.877923] snull_stats called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.877940] snull_stats called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.877949] snull_stats called by sn1
+
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879258] snull_open called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879276] snull_stats called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879432] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879440] snull_tx called by sn1, data : 33, len : 70 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879442] snull_hw_tx called by sn1, buf : 33, len : 70
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879444] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879447] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879448] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879450] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879452] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879454] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879459] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879461] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879516] snull_ioctl called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879561] snull_ioctl called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.879580] snull_ioctl called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.880079] snull_ioctl called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.880111] snull_ioctl called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.880129] snull_ioctl called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.880146] snull_ioctl called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.881304] snull_stats called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.881321] snull_stats called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.881330] snull_stats called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.882209] snull_stats called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.882224] snull_stats called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.882232] snull_stats called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.882664] snull_stats called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.882677] snull_stats called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.882683] snull_stats called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891041] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891057] snull_tx called by sn0, data : 33, len : 90 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891062] snull_hw_tx called by sn0, buf : 33, len : 90
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891066] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891071] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891073] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891077] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891080] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891084] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891091] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891095] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891152] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891160] snull_tx called by sn0, data : , len : 54 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891164] snull_hw_tx called by sn0, buf : , len : 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891167] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891172] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891174] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891178] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891181] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891184] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891190] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891194] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891217] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891225] snull_tx called by sn1, data : 33, len : 90 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891229] snull_hw_tx called by sn1, buf : 33, len : 90
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891233] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891237] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891239] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891243] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891246] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891250] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891255] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891258] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891288] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891295] snull_tx called by sn1, data : , len : 54 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891299] snull_hw_tx called by sn1, buf : , len : 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891303] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891308] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891309] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891313] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891316] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891320] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891324] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.891328] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.943482] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.943508] snull_tx called by sn1, data : 33, len : 90 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.943515] snull_hw_tx called by sn1, buf : 33, len : 90
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.943520] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.943527] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.943530] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.943535] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.943540] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.943545] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.943554] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8154.943559] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.007850] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.007878] snull_tx called by sn1, data : , len : 75 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.007889] snull_hw_tx called by sn1, buf : , len : 75
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.007897] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.007908] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.007913] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.007921] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.007929] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.007937] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.007950] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.007959] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008227] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008247] snull_tx called by sn0, data : , len : 75 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008257] snull_hw_tx called by sn0, buf : , len : 75
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008265] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008276] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008280] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008288] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008296] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008304] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008317] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008326] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008609] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008627] snull_tx called by sn1, data : 33, len : 95 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008637] snull_hw_tx called by sn1, buf : 33, len : 95
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008644] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008655] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008660] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008668] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008675] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008683] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008697] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008706] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008917] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008951] snull_tx called by sn0, data : 33, len : 95 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008961] snull_hw_tx called by sn0, buf : 33, len : 95
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008968] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008980] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008984] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008992] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.008999] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.009007] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.009020] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire NetworkManager[801]: <info>  [1512157069.4384] (sn1): driver WEXT version too old (got 0, expected >= 21)
+Dec  2 01:07:49 nitinsao-Aspire NetworkManager[801]: <warn>  [1512157069.4385] (sn1) failed to initialize Wi-Fi driver for ifindex 9
+Dec  2 01:07:49 nitinsao-Aspire NetworkManager[801]: <warn>  [1512157069.4385] manager: sn1: factory failed to create device: Device factory NMWifiFactory failed to create device sn1
+Dec  2 01:07:49 nitinsao-Aspire avahi-daemon[794]: Joining mDNS multicast group on interface sn0.IPv4 with address 192.168.0.1.
+Dec  2 01:07:49 nitinsao-Aspire avahi-daemon[794]: New relevant interface sn0.IPv4 for mDNS.
+Dec  2 01:07:49 nitinsao-Aspire avahi-daemon[794]: Registering new address record for 192.168.0.1 on sn0.IPv4.
+Dec  2 01:07:49 nitinsao-Aspire avahi-daemon[794]: Joining mDNS multicast group on interface sn0.IPv6 with address fe80::253:4eff:fe55:4c30.
+Dec  2 01:07:49 nitinsao-Aspire avahi-daemon[794]: New relevant interface sn0.IPv6 for mDNS.
+Dec  2 01:07:49 nitinsao-Aspire avahi-daemon[794]: Registering new address record for fe80::253:4eff:fe55:4c30 on sn0.*.
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.009028] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131259] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131281] snull_tx called by sn1, data : , len : 75 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131290] snull_hw_tx called by sn1, buf : , len : 75
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131296] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131305] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131309] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131315] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131322] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131328] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131338] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131345] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131559] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131573] snull_tx called by sn0, data : 33, len : 95 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131581] snull_hw_tx called by sn0, buf : 33, len : 95
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131587] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131596] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131600] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131606] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131612] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131618] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131627] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131634] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131784] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131798] snull_tx called by sn0, data : , len : 75 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131806] snull_hw_tx called by sn0, buf : , len : 75
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131812] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131821] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131824] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131830] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131836] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131842] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131852] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.131858] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.132005] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.132019] snull_tx called by sn1, data : 33, len : 95 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.132027] snull_hw_tx called by sn1, buf : 33, len : 95
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.132033] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.132042] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.132045] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.132051] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.132057] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.132063] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.132074] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire avahi-daemon[794]: Joining mDNS multicast group on interface sn1.IPv4 with address 192.168.1.2.
+Dec  2 01:07:49 nitinsao-Aspire avahi-daemon[794]: New relevant interface sn1.IPv4 for mDNS.
+Dec  2 01:07:49 nitinsao-Aspire avahi-daemon[794]: Registering new address record for 192.168.1.2 on sn1.IPv4.
+Dec  2 01:07:49 nitinsao-Aspire avahi-daemon[794]: Joining mDNS multicast group on interface sn1.IPv6 with address fe80::253:4eff:fe55:4c31.
+Dec  2 01:07:49 nitinsao-Aspire avahi-daemon[794]: New relevant interface sn1.IPv6 for mDNS.
+Dec  2 01:07:49 nitinsao-Aspire avahi-daemon[794]: Registering new address record for fe80::253:4eff:fe55:4c31 on sn1.*.
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.132081] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143114] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143124] snull_tx called by sn1, data : 33, len : 90 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143127] snull_hw_tx called by sn1, buf : 33, len : 90
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143129] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143132] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143133] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143135] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143137] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143138] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143143] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143144] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143171] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143175] snull_tx called by sn1, data : , len : 62 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143177] snull_hw_tx called by sn1, buf : , len : 62
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143179] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143182] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143183] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143184] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143186] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143188] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143190] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143192] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143204] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143208] snull_tx called by sn0, data : 33, len : 110 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143211] snull_hw_tx called by sn0, buf : 33, len : 110
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143212] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143215] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143216] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143217] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143219] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143221] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143223] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143225] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143236] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143240] snull_tx called by sn0, data : , len : 62 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143242] snull_hw_tx called by sn0, buf : , len : 62
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143244] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143246] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143247] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143249] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143250] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143252] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143255] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.143257] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229455] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229469] snull_tx called by sn0, data : , len : 160 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229473] snull_hw_tx called by sn0, buf : , len : 160
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229476] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229480] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229482] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229485] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229488] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229491] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229496] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229499] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229637] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229644] snull_tx called by sn0, data : 33, len : 180 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229648] snull_hw_tx called by sn0, buf : 33, len : 180
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229651] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229655] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229657] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229659] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229662] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229665] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229670] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229673] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229795] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229803] snull_tx called by sn1, data : , len : 160 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229806] snull_hw_tx called by sn1, buf : , len : 160
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229809] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229813] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229815] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229818] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229820] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229823] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229828] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229831] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229936] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229943] snull_tx called by sn1, data : 33, len : 180 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229947] snull_hw_tx called by sn1, buf : 33, len : 180
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229950] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229954] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229955] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229958] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229961] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229964] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229968] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.229971] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240753] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240762] snull_tx called by sn0, data : , len : 257 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240765] snull_hw_tx called by sn0, buf : , len : 257
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240766] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240769] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240770] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240772] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240774] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240776] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240779] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240781] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240894] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240898] snull_tx called by sn0, data : 33, len : 221 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240900] snull_hw_tx called by sn0, buf : 33, len : 221
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240902] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240905] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240906] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240907] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240909] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240911] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240914] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.240916] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241006] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241011] snull_tx called by sn1, data : , len : 257 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241013] snull_hw_tx called by sn1, buf : , len : 257
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241015] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241017] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241018] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241020] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241022] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241023] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241026] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241028] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241284] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241289] snull_tx called by sn1, data : 33, len : 221 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241291] snull_hw_tx called by sn1, buf : 33, len : 221
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241292] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241295] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241296] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241298] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241299] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241301] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241304] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.241306] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375178] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375230] snull_tx called by sn1, data : 33, len : 95 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375240] snull_hw_tx called by sn1, buf : 33, len : 95
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375247] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375258] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375262] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375269] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375276] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375283] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375294] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375302] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375630] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375647] snull_tx called by sn0, data : , len : 75 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375656] snull_hw_tx called by sn0, buf : , len : 75
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375663] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375673] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375677] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375684] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375691] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375698] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375710] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375719] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375897] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375913] snull_tx called by sn1, data : , len : 75 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375922] snull_hw_tx called by sn1, buf : , len : 75
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375928] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375938] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375942] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375949] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375956] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375963] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375974] snull_release_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.375982] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.376151] snull_header called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.376167] snull_tx called by sn0, data : 33, len : 95 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.376175] snull_hw_tx called by sn0, buf : 33, len : 95
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.376182] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.376192] snull_get_tx_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.376196] snull_enqueue_buf called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.376203] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.376209] snull_regular_interrupt called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.376216] snull_rx called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.376228] snull_release_buffer called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.376235] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.419231] snull_header called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.419243] snull_tx called by sn1, data : , len : 54 < ETH_ZLEN: 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.419247] snull_hw_tx called by sn1, buf : , len : 60
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.419249] Changing N/w ID of src & dest
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.419253] snull_get_tx_buffer called by sn1
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.419254] snull_enqueue_buf called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.419257] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.419259] snull_regular_interrupt called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.419261] snull_rx called by sn0
+Dec  2 01:07:49 nitinsao-Aspire kernel: [ 8155.419266] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.419269] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.451449] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.451459] snull_tx called by sn1, data : 33, len : 110 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.451461] snull_hw_tx called by sn1, buf : 33, len : 110
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.451463] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.451466] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.451467] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.451469] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.451471] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.451472] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.451477] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.451479] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.490998] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491014] snull_tx called by sn0, data : , len : 257 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491019] snull_hw_tx called by sn0, buf : , len : 257
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491023] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491028] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491030] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491034] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491038] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491041] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491047] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491051] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491300] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491317] snull_tx called by sn0, data : 33, len : 221 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491327] snull_hw_tx called by sn0, buf : 33, len : 221
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491330] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491335] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491337] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491341] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491344] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491348] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491353] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491357] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491507] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491517] snull_tx called by sn1, data : , len : 257 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491522] snull_hw_tx called by sn1, buf : , len : 257
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491525] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491530] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491532] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491535] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491539] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491542] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491548] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491551] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491814] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491822] snull_tx called by sn1, data : 33, len : 221 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491826] snull_hw_tx called by sn1, buf : 33, len : 221
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491830] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491835] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491837] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491840] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491844] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491847] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491853] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.491857] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.547468] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.547482] snull_tx called by sn0, data : 33, len : 110 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.547487] snull_hw_tx called by sn0, buf : 33, len : 110
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.547491] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.547496] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.547498] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.547502] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.547506] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.547509] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.547517] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire NetworkManager[801]: <info>  [1512157070.1227] devices added (path: /sys/devices/virtual/net/sn1, iface: sn1)
+Dec  2 01:07:50 nitinsao-Aspire NetworkManager[801]: <info>  [1512157070.1228] device added (path: /sys/devices/virtual/net/sn1, iface: sn1): no ifupdown configuration found.
+Dec  2 01:07:50 nitinsao-Aspire NetworkManager[801]: <info>  [1512157070.1236] devices added (path: /sys/devices/virtual/net/sn0, iface: sn0)
+Dec  2 01:07:50 nitinsao-Aspire NetworkManager[801]: <info>  [1512157070.1237] device added (path: /sys/devices/virtual/net/sn0, iface: sn0): no ifupdown configuration found.
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.547528] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.739842] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.739918] snull_tx called by sn1, data : 33, len : 90 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.739937] snull_hw_tx called by sn1, buf : 33, len : 90
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.739951] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.739968] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.739974] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.739988] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.740001] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.740015] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.740034] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.740048] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742006] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742030] snull_tx called by sn0, data : , len : 257 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742040] snull_hw_tx called by sn0, buf : , len : 257
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742048] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742059] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742064] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742072] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742080] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742089] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742100] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742109] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742501] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742520] snull_tx called by sn0, data : 33, len : 221 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742530] snull_hw_tx called by sn0, buf : 33, len : 221
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742537] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742548] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742553] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742561] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742569] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742577] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742590] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742598] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742979] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.742999] snull_tx called by sn1, data : , len : 257 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743008] snull_hw_tx called by sn1, buf : , len : 257
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743016] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743027] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743032] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743039] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743047] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743055] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743067] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743075] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743542] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743578] snull_tx called by sn1, data : 33, len : 221 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743601] snull_hw_tx called by sn1, buf : 33, len : 221
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743622] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743651] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743664] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743684] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743697] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743705] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743719] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.743727] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.835916] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.835997] snull_tx called by sn0, data : , len : 54 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.836018] snull_hw_tx called by sn0, buf : , len : 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.836032] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.836049] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.836055] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.836068] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.836081] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.836094] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.836118] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.836133] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.894824] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.894838] snull_tx called by sn0, data : , len : 70 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.894843] snull_hw_tx called by sn0, buf : , len : 70
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.894847] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.894852] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.894854] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.894858] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.894862] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.894866] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.894872] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.894876] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942033] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942045] snull_tx called by sn0, data : , len : 239 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942048] snull_hw_tx called by sn0, buf : , len : 239
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942050] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942053] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942054] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942057] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942059] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942061] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942065] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942067] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942189] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942194] snull_tx called by sn0, data : 33, len : 209 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942197] snull_hw_tx called by sn0, buf : 33, len : 209
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942199] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942202] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942203] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942205] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942207] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942209] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942212] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942215] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942286] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942292] snull_tx called by sn1, data : , len : 129 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942295] snull_hw_tx called by sn1, buf : , len : 129
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942297] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942300] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942301] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942303] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942305] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942307] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942311] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942313] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942535] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942541] snull_tx called by sn1, data : , len : 189 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942543] snull_hw_tx called by sn1, buf : , len : 189
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942545] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942548] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942550] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942552] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942554] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942556] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942559] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942562] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942649] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942654] snull_tx called by sn1, data : 33, len : 209 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942657] snull_hw_tx called by sn1, buf : 33, len : 209
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942659] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942662] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942664] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942666] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942668] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942670] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942673] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.942676] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984513] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984540] snull_tx called by sn0, data : , len : 73 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984551] snull_hw_tx called by sn0, buf : , len : 73
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984559] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984570] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984575] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984583] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984591] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984599] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984612] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984620] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984848] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984867] snull_tx called by sn0, data : , len : 69 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984877] snull_hw_tx called by sn0, buf : , len : 69
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984885] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984896] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984900] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984931] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984940] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984948] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984961] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.984969] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.985427] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.985447] snull_tx called by sn1, data : , len : 70 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.985457] snull_hw_tx called by sn1, buf : , len : 70
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.985464] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.985476] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.985480] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.985488] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.985496] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.985504] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.985518] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.985526] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.985982] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986001] snull_tx called by sn1, data : , len : 69 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986011] snull_hw_tx called by sn1, buf : , len : 69
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986019] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986030] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986034] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986042] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986050] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986058] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986070] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986078] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986305] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986325] snull_tx called by sn1, data : , len : 73 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986335] snull_hw_tx called by sn1, buf : , len : 73
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986342] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986353] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986358] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986366] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986374] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986382] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986394] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8155.986402] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.005602] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.005629] snull_tx called by sn0, data : , len : 70 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.005640] snull_hw_tx called by sn0, buf : , len : 70
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.005648] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.005659] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.005664] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.005671] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.005679] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.005687] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.005702] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.005710] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.059876] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.059921] snull_tx called by sn0, data : 33, len : 90 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.059937] snull_hw_tx called by sn0, buf : 33, len : 90
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.059949] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.059964] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.059969] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.059980] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.059991] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.060002] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.060022] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.060051] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.105925] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.105936] snull_tx called by sn1, data : , len : 73 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.105939] snull_hw_tx called by sn1, buf : , len : 73
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.105941] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.105943] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.105945] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.105946] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.105948] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.105950] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.105953] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.105955] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106113] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106118] snull_tx called by sn0, data : , len : 69 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106120] snull_hw_tx called by sn0, buf : , len : 69
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106122] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106125] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106126] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106127] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106129] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106131] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106136] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106138] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106235] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106239] snull_tx called by sn1, data : , len : 69 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106242] snull_hw_tx called by sn1, buf : , len : 69
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106243] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106246] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106247] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106248] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106250] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106252] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106255] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106257] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106370] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106374] snull_tx called by sn1, data : , len : 70 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106376] snull_hw_tx called by sn1, buf : , len : 70
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106378] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106380] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106381] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106383] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106385] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106386] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106389] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106391] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106513] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106518] snull_tx called by sn0, data : , len : 73 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106520] snull_hw_tx called by sn0, buf : , len : 73
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106521] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106531] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106532] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106535] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106537] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106540] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106544] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106547] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106614] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106620] snull_tx called by sn0, data : , len : 70 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106623] snull_hw_tx called by sn0, buf : , len : 70
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106625] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106629] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106630] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106633] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106635] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106638] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106641] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.106644] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231186] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231216] snull_tx called by sn0, data : , len : 160 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231229] snull_hw_tx called by sn0, buf : , len : 160
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231238] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231251] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231256] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231266] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231275] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231284] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231300] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231310] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231863] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231885] snull_tx called by sn0, data : 33, len : 180 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231897] snull_hw_tx called by sn0, buf : 33, len : 180
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231906] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231919] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231924] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231933] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231942] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231951] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231965] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.231984] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232352] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232375] snull_tx called by sn1, data : , len : 160 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232387] snull_hw_tx called by sn1, buf : , len : 160
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232395] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232408] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232414] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232423] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232432] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232441] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232456] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232466] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232795] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232817] snull_tx called by sn1, data : 33, len : 180 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232829] snull_hw_tx called by sn1, buf : 33, len : 180
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232838] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232851] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232856] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232865] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232874] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232883] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232899] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.232909] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.382151] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.382182] snull_tx called by sn1, data : , len : 73 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.382195] snull_hw_tx called by sn1, buf : , len : 73
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.382204] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.382218] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.382223] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.382233] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.382242] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.382251] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.382268] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.382278] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383039] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383063] snull_tx called by sn1, data : , len : 69 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383075] snull_hw_tx called by sn1, buf : , len : 69
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383084] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383097] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383102] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383111] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383120] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383130] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383145] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383155] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383817] snull_header called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383860] snull_tx called by sn1, data : , len : 70 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383887] snull_hw_tx called by sn1, buf : , len : 70
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383911] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383945] snull_get_tx_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383960] snull_enqueue_buf called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383980] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.383990] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384000] snull_rx called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384014] snull_release_buffer called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384024] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384534] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384557] snull_tx called by sn0, data : , len : 73 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384568] snull_hw_tx called by sn0, buf : , len : 73
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384577] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384591] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384596] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384605] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384615] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384624] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384639] snull_release_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384649] snull_regular_interrupt called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384897] snull_header called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384918] snull_tx called by sn0, data : , len : 69 < ETH_ZLEN: 60
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384930] snull_hw_tx called by sn0, buf : , len : 69
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384938] Changing N/w ID of src & dest
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384952] snull_get_tx_buffer called by sn0
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384957] snull_enqueue_buf called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.384990] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.385001] snull_regular_interrupt called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.385010] snull_rx called by sn1
+Dec  2 01:07:50 nitinsao-Aspire kernel: [ 8156.385026] snull_release_buffer called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.385036] snull_regular_interrupt called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.884087] snull_stats called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.884245] snull_stats called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.884284] snull_stats called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.884856] snull_ioctl called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.885002] snull_ioctl called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.885089] snull_ioctl called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.885172] snull_ioctl called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.885536] snull_ioctl called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.885677] snull_ioctl called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.885763] snull_ioctl called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.885845] snull_ioctl called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891339] snull_header called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891371] snull_tx called by sn0, data : , len : 214 < ETH_ZLEN: 60
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891385] snull_hw_tx called by sn0, buf : , len : 214
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891394] Changing N/w ID of src & dest
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891407] snull_get_tx_buffer called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891413] snull_enqueue_buf called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891423] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891432] snull_regular_interrupt called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891441] snull_rx called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891458] snull_release_buffer called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891469] snull_regular_interrupt called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891619] snull_header called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891642] snull_tx called by sn1, data : , len : 214 < ETH_ZLEN: 60
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891654] snull_hw_tx called by sn1, buf : , len : 214
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891663] Changing N/w ID of src & dest
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891676] snull_get_tx_buffer called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891682] snull_enqueue_buf called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891691] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891701] snull_regular_interrupt called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891710] snull_rx called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891726] snull_release_buffer called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8156.891735] snull_regular_interrupt called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.004756] snull_header called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.004778] snull_tx called by sn0, data : , len : 239 < ETH_ZLEN: 60
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.004787] snull_hw_tx called by sn0, buf : , len : 239
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.004793] Changing N/w ID of src & dest
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.004802] snull_get_tx_buffer called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.004805] snull_enqueue_buf called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.004812] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.004818] snull_regular_interrupt called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.004824] snull_rx called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.004836] snull_release_buffer called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.004843] snull_regular_interrupt called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005135] snull_header called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005149] snull_tx called by sn0, data : 33, len : 209 < ETH_ZLEN: 60
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005157] snull_hw_tx called by sn0, buf : 33, len : 209
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005163] Changing N/w ID of src & dest
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005172] snull_get_tx_buffer called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005175] snull_enqueue_buf called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005181] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005187] snull_regular_interrupt called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005194] snull_rx called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005204] snull_release_buffer called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005211] snull_regular_interrupt called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005505] snull_header called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005521] snull_tx called by sn1, data : , len : 239 < ETH_ZLEN: 60
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005529] snull_hw_tx called by sn1, buf : , len : 239
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005534] Changing N/w ID of src & dest
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005543] snull_get_tx_buffer called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005547] snull_enqueue_buf called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005553] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005559] snull_regular_interrupt called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005566] snull_rx called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005576] snull_release_buffer called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005583] snull_regular_interrupt called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005840] snull_header called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005854] snull_tx called by sn1, data : 33, len : 209 < ETH_ZLEN: 60
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005862] snull_hw_tx called by sn1, buf : 33, len : 209
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005868] Changing N/w ID of src & dest
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005876] snull_get_tx_buffer called by sn1
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005880] snull_enqueue_buf called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005886] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005892] snull_regular_interrupt called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005898] snull_rx called by sn0
+Dec  2 01:07:51 nitinsao-Aspire kernel: [ 8157.005907] snull_release_buffer called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.005914] snull_regular_interrupt called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893630] snull_header called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893649] snull_tx called by sn0, data : , len : 214 < ETH_ZLEN: 60
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893657] snull_hw_tx called by sn0, buf : , len : 214
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893662] Changing N/w ID of src & dest
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893670] snull_get_tx_buffer called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893673] snull_enqueue_buf called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893679] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893685] snull_regular_interrupt called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893690] snull_rx called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893702] snull_release_buffer called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893730] snull_regular_interrupt called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893882] snull_header called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893896] snull_tx called by sn1, data : , len : 214 < ETH_ZLEN: 60
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893903] snull_hw_tx called by sn1, buf : , len : 214
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893909] Changing N/w ID of src & dest
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893916] snull_get_tx_buffer called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893920] snull_enqueue_buf called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893925] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893931] snull_regular_interrupt called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893936] snull_rx called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893945] snull_release_buffer called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8157.893951] snull_regular_interrupt called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.232915] snull_header called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.232929] snull_tx called by sn0, data : , len : 160 < ETH_ZLEN: 60
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.232934] snull_hw_tx called by sn0, buf : , len : 160
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.232937] Changing N/w ID of src & dest
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.232942] snull_get_tx_buffer called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.232944] snull_enqueue_buf called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.232947] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.232951] snull_regular_interrupt called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.232954] snull_rx called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.232960] snull_release_buffer called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.232964] snull_regular_interrupt called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233110] snull_header called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233118] snull_tx called by sn0, data : 33, len : 180 < ETH_ZLEN: 60
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233122] snull_hw_tx called by sn0, buf : 33, len : 180
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233125] Changing N/w ID of src & dest
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233129] snull_get_tx_buffer called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233131] snull_enqueue_buf called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233135] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233138] snull_regular_interrupt called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233141] snull_rx called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233147] snull_release_buffer called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233150] snull_regular_interrupt called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233267] snull_header called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233275] snull_tx called by sn1, data : , len : 160 < ETH_ZLEN: 60
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233279] snull_hw_tx called by sn1, buf : , len : 160
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233282] Changing N/w ID of src & dest
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233287] snull_get_tx_buffer called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233289] snull_enqueue_buf called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233292] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233295] snull_regular_interrupt called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233298] snull_rx called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233303] snull_release_buffer called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233307] snull_regular_interrupt called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233419] snull_header called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233426] snull_tx called by sn1, data : 33, len : 180 < ETH_ZLEN: 60
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233430] snull_hw_tx called by sn1, buf : 33, len : 180
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233433] Changing N/w ID of src & dest
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233438] snull_get_tx_buffer called by sn1
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233440] snull_enqueue_buf called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233443] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233446] snull_regular_interrupt called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233449] snull_rx called by sn0
+Dec  2 01:07:52 nitinsao-Aspire kernel: [ 8158.233454] snull_release_buffer called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.233458] snull_regular_interrupt called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876681] snull_header called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876710] snull_tx called by sn1, data : 33, len : 70 < ETH_ZLEN: 60
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876723] snull_hw_tx called by sn1, buf : 33, len : 70
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876731] Changing N/w ID of src & dest
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876744] snull_get_tx_buffer called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876750] snull_enqueue_buf called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876759] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876769] snull_regular_interrupt called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876778] snull_rx called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876792] snull_release_buffer called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876802] snull_regular_interrupt called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876850] snull_header called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876869] snull_tx called by sn0, data : 33, len : 70 < ETH_ZLEN: 60
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876881] snull_hw_tx called by sn0, buf : 33, len : 70
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876889] Changing N/w ID of src & dest
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876902] snull_get_tx_buffer called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876907] snull_enqueue_buf called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876916] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876925] snull_regular_interrupt called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876935] snull_rx called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876948] snull_release_buffer called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.876958] snull_regular_interrupt called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895292] snull_header called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895349] snull_tx called by sn0, data : , len : 214 < ETH_ZLEN: 60
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895366] snull_hw_tx called by sn0, buf : , len : 214
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895374] Changing N/w ID of src & dest
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895391] snull_get_tx_buffer called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895396] snull_enqueue_buf called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895405] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895413] snull_regular_interrupt called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895426] snull_rx called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895455] snull_release_buffer called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895464] snull_regular_interrupt called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895733] snull_header called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895753] snull_tx called by sn1, data : , len : 214 < ETH_ZLEN: 60
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895763] snull_hw_tx called by sn1, buf : , len : 214
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895770] Changing N/w ID of src & dest
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895781] snull_get_tx_buffer called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895786] snull_enqueue_buf called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895794] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895801] snull_regular_interrupt called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895809] snull_rx called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895822] snull_release_buffer called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8158.895830] snull_regular_interrupt called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067199] snull_header called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067232] snull_tx called by sn0, data : , len : 239 < ETH_ZLEN: 60
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067245] snull_hw_tx called by sn0, buf : , len : 239
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067254] Changing N/w ID of src & dest
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067267] snull_get_tx_buffer called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067273] snull_enqueue_buf called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067283] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067292] snull_regular_interrupt called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067302] snull_rx called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067319] snull_release_buffer called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067329] snull_regular_interrupt called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067756] snull_header called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067778] snull_tx called by sn0, data : 33, len : 209 < ETH_ZLEN: 60
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067789] snull_hw_tx called by sn0, buf : 33, len : 209
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067798] Changing N/w ID of src & dest
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067811] snull_get_tx_buffer called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067817] snull_enqueue_buf called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067826] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067835] snull_regular_interrupt called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067844] snull_rx called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067859] snull_release_buffer called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.067870] snull_regular_interrupt called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068309] snull_header called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068333] snull_tx called by sn1, data : , len : 239 < ETH_ZLEN: 60
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068345] snull_hw_tx called by sn1, buf : , len : 239
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068354] Changing N/w ID of src & dest
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068367] snull_get_tx_buffer called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068373] snull_enqueue_buf called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068382] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068391] snull_regular_interrupt called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068401] snull_rx called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068416] snull_release_buffer called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068426] snull_regular_interrupt called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068931] snull_header called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068954] snull_tx called by sn1, data : 33, len : 209 < ETH_ZLEN: 60
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068965] snull_hw_tx called by sn1, buf : 33, len : 209
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068974] Changing N/w ID of src & dest
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068987] snull_get_tx_buffer called by sn1
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.068993] snull_enqueue_buf called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.069002] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.069011] snull_regular_interrupt called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.069021] snull_rx called by sn0
+Dec  2 01:07:53 nitinsao-Aspire kernel: [ 8159.069034] snull_release_buffer called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.069044] snull_regular_interrupt called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.885404] snull_stats called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.885555] snull_stats called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.885594] snull_stats called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.886147] snull_ioctl called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.886289] snull_ioctl called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.886374] snull_ioctl called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.886453] snull_ioctl called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.886816] snull_ioctl called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.886954] snull_ioctl called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.887037] snull_ioctl called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.887120] snull_ioctl called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894083] snull_header called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894112] snull_tx called by sn0, data : , len : 82 < ETH_ZLEN: 60
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894125] snull_hw_tx called by sn0, buf : , len : 82
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894135] Changing N/w ID of src & dest
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894148] snull_get_tx_buffer called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894154] snull_enqueue_buf called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894163] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894173] snull_regular_interrupt called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894182] snull_rx called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894197] snull_release_buffer called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894207] snull_regular_interrupt called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894365] snull_header called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894386] snull_tx called by sn0, data : 33, len : 102 < ETH_ZLEN: 60
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894397] snull_hw_tx called by sn0, buf : 33, len : 102
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894406] Changing N/w ID of src & dest
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894419] snull_get_tx_buffer called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894424] snull_enqueue_buf called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894433] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894442] snull_regular_interrupt called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894452] snull_rx called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894469] snull_release_buffer called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894479] snull_regular_interrupt called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894632] snull_header called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894656] snull_tx called by sn1, data : , len : 82 < ETH_ZLEN: 60
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894667] snull_hw_tx called by sn1, buf : , len : 82
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894676] Changing N/w ID of src & dest
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894689] snull_get_tx_buffer called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894695] snull_enqueue_buf called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894703] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894713] snull_regular_interrupt called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894722] snull_rx called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894739] snull_release_buffer called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894749] snull_regular_interrupt called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894901] snull_header called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894922] snull_tx called by sn1, data : 33, len : 102 < ETH_ZLEN: 60
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894933] snull_hw_tx called by sn1, buf : 33, len : 102
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894942] Changing N/w ID of src & dest
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894955] snull_get_tx_buffer called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894960] snull_enqueue_buf called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894969] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894978] snull_regular_interrupt called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.894987] snull_rx called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.895002] snull_release_buffer called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.895012] snull_regular_interrupt called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.895864] snull_header called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.895887] snull_tx called by sn0, data : , len : 214 < ETH_ZLEN: 60
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.895898] snull_hw_tx called by sn0, buf : , len : 214
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.895907] Changing N/w ID of src & dest
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.895920] snull_get_tx_buffer called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.895925] snull_enqueue_buf called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.895934] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.895943] snull_regular_interrupt called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.895953] snull_rx called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.895968] snull_release_buffer called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.895978] snull_regular_interrupt called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896099] snull_header called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896121] snull_tx called by sn1, data : , len : 214 < ETH_ZLEN: 60
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896132] snull_hw_tx called by sn1, buf : , len : 214
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896141] Changing N/w ID of src & dest
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896154] snull_get_tx_buffer called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896159] snull_enqueue_buf called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896168] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896177] snull_regular_interrupt called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896186] snull_rx called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896200] snull_release_buffer called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896210] snull_regular_interrupt called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896736] snull_header called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896759] snull_tx called by sn0, data : , len : 82 < ETH_ZLEN: 60
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896771] snull_hw_tx called by sn0, buf : , len : 82
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896779] Changing N/w ID of src & dest
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896792] snull_get_tx_buffer called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896797] snull_enqueue_buf called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896806] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896815] snull_regular_interrupt called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896825] snull_rx called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896839] snull_release_buffer called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896849] snull_regular_interrupt called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.896995] snull_header called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897016] snull_tx called by sn0, data : 33, len : 102 < ETH_ZLEN: 60
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897114] snull_hw_tx called by sn0, buf : 33, len : 102
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897124] Changing N/w ID of src & dest
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897145] snull_get_tx_buffer called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897155] snull_enqueue_buf called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897170] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897187] snull_regular_interrupt called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897203] snull_rx called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897224] snull_release_buffer called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897240] snull_regular_interrupt called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897315] snull_header called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897324] snull_tx called by sn1, data : , len : 82 < ETH_ZLEN: 60
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897331] snull_hw_tx called by sn1, buf : , len : 82
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897337] Changing N/w ID of src & dest
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897346] snull_get_tx_buffer called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897351] snull_enqueue_buf called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897358] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897365] snull_regular_interrupt called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897372] snull_rx called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897379] snull_release_buffer called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897386] snull_regular_interrupt called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897418] snull_header called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897422] snull_tx called by sn1, data : 33, len : 102 < ETH_ZLEN: 60
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897424] snull_hw_tx called by sn1, buf : 33, len : 102
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897426] Changing N/w ID of src & dest
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897428] snull_get_tx_buffer called by sn1
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897429] snull_enqueue_buf called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897431] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897433] snull_regular_interrupt called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897434] snull_rx called by sn0
+Dec  2 01:07:54 nitinsao-Aspire kernel: [ 8159.897437] snull_release_buffer called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8159.897439] snull_regular_interrupt called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898204] snull_header called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898234] snull_tx called by sn0, data : , len : 82 < ETH_ZLEN: 60
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898247] snull_hw_tx called by sn0, buf : , len : 82
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898256] Changing N/w ID of src & dest
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898269] snull_get_tx_buffer called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898275] snull_enqueue_buf called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898284] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898294] snull_regular_interrupt called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898303] snull_rx called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898318] snull_release_buffer called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898328] snull_regular_interrupt called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898493] snull_header called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898515] snull_tx called by sn0, data : 33, len : 102 < ETH_ZLEN: 60
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898526] snull_hw_tx called by sn0, buf : 33, len : 102
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898535] Changing N/w ID of src & dest
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898548] snull_get_tx_buffer called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898553] snull_enqueue_buf called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898562] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898571] snull_regular_interrupt called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898581] snull_rx called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898596] snull_release_buffer called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898605] snull_regular_interrupt called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898763] snull_header called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898786] snull_tx called by sn1, data : , len : 82 < ETH_ZLEN: 60
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898798] snull_hw_tx called by sn1, buf : , len : 82
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898806] Changing N/w ID of src & dest
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898819] snull_get_tx_buffer called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898825] snull_enqueue_buf called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898834] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898843] snull_regular_interrupt called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898852] snull_rx called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898865] snull_release_buffer called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.898875] snull_regular_interrupt called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.899024] snull_header called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.899044] snull_tx called by sn1, data : 33, len : 102 < ETH_ZLEN: 60
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.899056] snull_hw_tx called by sn1, buf : 33, len : 102
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.899064] Changing N/w ID of src & dest
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.899077] snull_get_tx_buffer called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.899082] snull_enqueue_buf called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.899091] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.899100] snull_regular_interrupt called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.899110] snull_rx called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.899123] snull_release_buffer called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.899132] snull_regular_interrupt called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900345] snull_header called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900391] snull_tx called by sn0, data : , len : 82 < ETH_ZLEN: 60
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900404] snull_hw_tx called by sn0, buf : , len : 82
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900413] Changing N/w ID of src & dest
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900426] snull_get_tx_buffer called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900431] snull_enqueue_buf called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900440] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900450] snull_regular_interrupt called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900459] snull_rx called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900474] snull_release_buffer called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900484] snull_regular_interrupt called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900687] snull_header called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900708] snull_tx called by sn0, data : 33, len : 102 < ETH_ZLEN: 60
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900720] snull_hw_tx called by sn0, buf : 33, len : 102
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900729] Changing N/w ID of src & dest
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900742] snull_get_tx_buffer called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900747] snull_enqueue_buf called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900756] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900765] snull_regular_interrupt called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900774] snull_rx called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900788] snull_release_buffer called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900798] snull_regular_interrupt called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900948] snull_header called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900970] snull_tx called by sn1, data : , len : 82 < ETH_ZLEN: 60
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900982] snull_hw_tx called by sn1, buf : , len : 82
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.900991] Changing N/w ID of src & dest
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901003] snull_get_tx_buffer called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901009] snull_enqueue_buf called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901018] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901027] snull_regular_interrupt called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901036] snull_rx called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901050] snull_release_buffer called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901060] snull_regular_interrupt called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901212] snull_header called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901233] snull_tx called by sn1, data : 33, len : 102 < ETH_ZLEN: 60
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901244] snull_hw_tx called by sn1, buf : 33, len : 102
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901253] Changing N/w ID of src & dest
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901266] snull_get_tx_buffer called by sn1
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901271] snull_enqueue_buf called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901280] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901289] snull_regular_interrupt called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901298] snull_rx called by sn0
+Dec  2 01:07:55 nitinsao-Aspire kernel: [ 8160.901313] snull_release_buffer called by sn1
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8160.901323] snull_regular_interrupt called by sn1
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.235708] snull_header called by sn0
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.235740] snull_tx called by sn0, data : , len : 160 < ETH_ZLEN: 60
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.235753] snull_hw_tx called by sn0, buf : , len : 160
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.235762] Changing N/w ID of src & dest
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.235775] snull_get_tx_buffer called by sn0
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.235780] snull_enqueue_buf called by sn1
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.235790] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.235799] snull_regular_interrupt called by sn1
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.235808] snull_rx called by sn1
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.235823] snull_release_buffer called by sn0
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.235832] snull_regular_interrupt called by sn0
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236205] snull_header called by sn0
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236227] snull_tx called by sn0, data : 33, len : 180 < ETH_ZLEN: 60
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236239] snull_hw_tx called by sn0, buf : 33, len : 180
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236247] Changing N/w ID of src & dest
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236260] snull_get_tx_buffer called by sn0
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236266] snull_enqueue_buf called by sn1
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236274] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236283] snull_regular_interrupt called by sn1
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236293] snull_rx called by sn1
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236306] snull_release_buffer called by sn0
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236316] snull_regular_interrupt called by sn0
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236663] snull_header called by sn1
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236686] snull_tx called by sn1, data : , len : 160 < ETH_ZLEN: 60
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236697] snull_hw_tx called by sn1, buf : , len : 160
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236706] Changing N/w ID of src & dest
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236719] snull_get_tx_buffer called by sn1
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236724] snull_enqueue_buf called by sn0
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236733] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236742] snull_regular_interrupt called by sn0
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236752] snull_rx called by sn0
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236767] snull_release_buffer called by sn1
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.236776] snull_regular_interrupt called by sn1
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.237107] snull_header called by sn1
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.237128] snull_tx called by sn1, data : 33, len : 180 < ETH_ZLEN: 60
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.237140] snull_hw_tx called by sn1, buf : 33, len : 180
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.237148] Changing N/w ID of src & dest
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.237161] snull_get_tx_buffer called by sn1
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.237166] snull_enqueue_buf called by sn0
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.237175] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.237184] snull_regular_interrupt called by sn0
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.237193] snull_rx called by sn0
+Dec  2 01:07:56 nitinsao-Aspire kernel: [ 8162.237210] snull_release_buffer called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.237220] snull_regular_interrupt called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.902163] snull_header called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.902193] snull_tx called by sn0, data : , len : 82 < ETH_ZLEN: 60
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.902205] snull_hw_tx called by sn0, buf : , len : 82
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.902214] Changing N/w ID of src & dest
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.902228] snull_get_tx_buffer called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.902234] snull_enqueue_buf called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.902243] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.902330] snull_regular_interrupt called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.902343] snull_rx called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.902361] snull_release_buffer called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.902371] snull_regular_interrupt called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903021] snull_header called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903043] snull_tx called by sn0, data : 33, len : 102 < ETH_ZLEN: 60
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903055] snull_hw_tx called by sn0, buf : 33, len : 102
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903073] Changing N/w ID of src & dest
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903086] snull_get_tx_buffer called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903091] snull_enqueue_buf called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903100] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903110] snull_regular_interrupt called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903119] snull_rx called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903132] snull_release_buffer called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903142] snull_regular_interrupt called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903308] snull_header called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903332] snull_tx called by sn1, data : , len : 82 < ETH_ZLEN: 60
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903343] snull_hw_tx called by sn1, buf : , len : 82
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903352] Changing N/w ID of src & dest
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903366] snull_get_tx_buffer called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903372] snull_enqueue_buf called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903381] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903401] snull_regular_interrupt called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903410] snull_rx called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903424] snull_release_buffer called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903433] snull_regular_interrupt called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903589] snull_header called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903610] snull_tx called by sn1, data : 33, len : 102 < ETH_ZLEN: 60
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903621] snull_hw_tx called by sn1, buf : 33, len : 102
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903630] Changing N/w ID of src & dest
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903642] snull_get_tx_buffer called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903648] snull_enqueue_buf called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903657] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903666] snull_regular_interrupt called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903675] snull_rx called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903688] snull_release_buffer called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.903698] snull_regular_interrupt called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905284] snull_header called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905309] snull_tx called by sn0, data : , len : 82 < ETH_ZLEN: 60
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905321] snull_hw_tx called by sn0, buf : , len : 82
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905330] Changing N/w ID of src & dest
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905344] snull_get_tx_buffer called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905350] snull_enqueue_buf called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905359] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905368] snull_regular_interrupt called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905385] snull_rx called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905401] snull_release_buffer called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905411] snull_regular_interrupt called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905629] snull_header called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905650] snull_tx called by sn0, data : 33, len : 102 < ETH_ZLEN: 60
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905662] snull_hw_tx called by sn0, buf : 33, len : 102
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905670] Changing N/w ID of src & dest
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905684] snull_get_tx_buffer called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905689] snull_enqueue_buf called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905698] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905737] snull_regular_interrupt called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905747] snull_rx called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905762] snull_release_buffer called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905772] snull_regular_interrupt called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905959] snull_header called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905982] snull_tx called by sn1, data : , len : 82 < ETH_ZLEN: 60
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.905994] snull_hw_tx called by sn1, buf : , len : 82
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906004] Changing N/w ID of src & dest
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906017] snull_get_tx_buffer called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906022] snull_enqueue_buf called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906040] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906049] snull_regular_interrupt called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906058] snull_rx called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906071] snull_release_buffer called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906081] snull_regular_interrupt called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906232] snull_header called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906312] snull_tx called by sn1, data : 33, len : 102 < ETH_ZLEN: 60
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906326] snull_hw_tx called by sn1, buf : 33, len : 102
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906335] Changing N/w ID of src & dest
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906352] snull_get_tx_buffer called by sn1
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906356] snull_enqueue_buf called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906363] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906370] snull_regular_interrupt called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906378] snull_rx called by sn0
+Dec  2 01:07:57 nitinsao-Aspire kernel: [ 8162.906388] snull_release_buffer called by sn1
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8162.906395] snull_regular_interrupt called by sn1
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816550] snull_header called by sn0
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816627] snull_tx called by sn0, data : 33, len : 70 < ETH_ZLEN: 60
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816646] snull_hw_tx called by sn0, buf : 33, len : 70
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816660] Changing N/w ID of src & dest
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816677] snull_get_tx_buffer called by sn0
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816683] snull_enqueue_buf called by sn1
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816696] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816709] snull_regular_interrupt called by sn1
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816723] snull_rx called by sn1
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816742] snull_release_buffer called by sn0
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816756] snull_regular_interrupt called by sn0
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816814] snull_header called by sn1
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816847] snull_tx called by sn1, data : 33, len : 70 < ETH_ZLEN: 60
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816862] snull_hw_tx called by sn1, buf : 33, len : 70
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816874] Changing N/w ID of src & dest
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816890] snull_get_tx_buffer called by sn1
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816896] snull_enqueue_buf called by sn0
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816908] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816921] snull_regular_interrupt called by sn0
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816933] snull_rx called by sn0
+Dec  2 01:08:01 nitinsao-Aspire kernel: [ 8166.816950] snull_release_buffer called by sn1
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8166.816963] snull_regular_interrupt called by sn1
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240276] snull_header called by sn0
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240308] snull_tx called by sn0, data : , len : 160 < ETH_ZLEN: 60
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240321] snull_hw_tx called by sn0, buf : , len : 160
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240330] Changing N/w ID of src & dest
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240343] snull_get_tx_buffer called by sn0
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240349] snull_enqueue_buf called by sn1
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240358] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240367] snull_regular_interrupt called by sn1
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240376] snull_rx called by sn1
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240393] snull_release_buffer called by sn0
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240403] snull_regular_interrupt called by sn0
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240766] snull_header called by sn0
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240788] snull_tx called by sn0, data : 33, len : 180 < ETH_ZLEN: 60
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240799] snull_hw_tx called by sn0, buf : 33, len : 180
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240808] Changing N/w ID of src & dest
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240821] snull_get_tx_buffer called by sn0
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240826] snull_enqueue_buf called by sn1
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240835] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240844] snull_regular_interrupt called by sn1
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240853] snull_rx called by sn1
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240867] snull_release_buffer called by sn0
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.240876] snull_regular_interrupt called by sn0
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.241213] snull_header called by sn1
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.241237] snull_tx called by sn1, data : , len : 160 < ETH_ZLEN: 60
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.241322] snull_hw_tx called by sn1, buf : , len : 160
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.241334] Changing N/w ID of src & dest
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.241346] snull_get_tx_buffer called by sn1
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.241352] snull_enqueue_buf called by sn0
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.241361] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.241371] snull_regular_interrupt called by sn0
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.241380] snull_rx called by sn0
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.241393] snull_release_buffer called by sn1
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.241403] snull_regular_interrupt called by sn1
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.246194] snull_header called by sn1
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.246223] snull_tx called by sn1, data : 33, len : 180 < ETH_ZLEN: 60
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.246236] snull_hw_tx called by sn1, buf : 33, len : 180
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.246245] Changing N/w ID of src & dest
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.246258] snull_get_tx_buffer called by sn1
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.246264] snull_enqueue_buf called by sn0
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.246273] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.246282] snull_regular_interrupt called by sn0
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.246291] snull_rx called by sn0
+Dec  2 01:08:04 nitinsao-Aspire kernel: [ 8170.246308] snull_release_buffer called by sn1
+Dec  2 01:08:16 nitinsao-Aspire kernel: [ 8170.246318] snull_regular_interrupt called by sn1
+Dec  2 01:08:16 nitinsao-Aspire kernel: [ 8182.182324] snull_header called by sn0
+Dec  2 01:08:16 nitinsao-Aspire kernel: [ 8182.182397] snull_tx called by sn0, data : 33, len : 70 < ETH_ZLEN: 60
+Dec  2 01:08:16 nitinsao-Aspire kernel: [ 8182.182417] snull_hw_tx called by sn0, buf : 33, len : 70
+Dec  2 01:08:16 nitinsao-Aspire kernel: [ 8182.182431] Changing N/w ID of src & dest
+Dec  2 01:08:16 nitinsao-Aspire kernel: [ 8182.182448] snull_get_tx_buffer called by sn0
+Dec  2 01:08:16 nitinsao-Aspire kernel: [ 8182.182453] snull_enqueue_buf called by sn1
+Dec  2 01:08:16 nitinsao-Aspire kernel: [ 8182.182467] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:16 nitinsao-Aspire kernel: [ 8182.182480] snull_regular_interrupt called by sn1
+Dec  2 01:08:16 nitinsao-Aspire kernel: [ 8182.182493] snull_rx called by sn1
+Dec  2 01:08:16 nitinsao-Aspire kernel: [ 8182.182515] snull_release_buffer called by sn0
+Dec  2 01:08:18 nitinsao-Aspire kernel: [ 8182.182530] snull_regular_interrupt called by sn0
+Dec  2 01:08:18 nitinsao-Aspire kernel: [ 8183.975251] snull_header called by sn1
+Dec  2 01:08:18 nitinsao-Aspire kernel: [ 8183.975326] snull_tx called by sn1, data : 33, len : 70 < ETH_ZLEN: 60
+Dec  2 01:08:18 nitinsao-Aspire kernel: [ 8183.975346] snull_hw_tx called by sn1, buf : 33, len : 70
+Dec  2 01:08:18 nitinsao-Aspire kernel: [ 8183.975359] Changing N/w ID of src & dest
+Dec  2 01:08:18 nitinsao-Aspire kernel: [ 8183.975376] snull_get_tx_buffer called by sn1
+Dec  2 01:08:18 nitinsao-Aspire kernel: [ 8183.975382] snull_enqueue_buf called by sn0
+Dec  2 01:08:18 nitinsao-Aspire kernel: [ 8183.975396] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:18 nitinsao-Aspire kernel: [ 8183.975409] snull_regular_interrupt called by sn0
+Dec  2 01:08:18 nitinsao-Aspire kernel: [ 8183.975422] snull_rx called by sn0
+Dec  2 01:08:18 nitinsao-Aspire kernel: [ 8183.975442] snull_release_buffer called by sn1
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8183.975456] snull_regular_interrupt called by sn1
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.247998] snull_header called by sn0
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248029] snull_tx called by sn0, data : , len : 160 < ETH_ZLEN: 60
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248041] snull_hw_tx called by sn0, buf : , len : 160
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248050] Changing N/w ID of src & dest
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248064] snull_get_tx_buffer called by sn0
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248069] snull_enqueue_buf called by sn1
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248079] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248088] snull_regular_interrupt called by sn1
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248097] snull_rx called by sn1
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248113] snull_release_buffer called by sn0
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248123] snull_regular_interrupt called by sn0
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248516] snull_header called by sn0
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248538] snull_tx called by sn0, data : 33, len : 180 < ETH_ZLEN: 60
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248550] snull_hw_tx called by sn0, buf : 33, len : 180
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248558] Changing N/w ID of src & dest
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248572] snull_get_tx_buffer called by sn0
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248577] snull_enqueue_buf called by sn1
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248586] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248595] snull_regular_interrupt called by sn1
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248604] snull_rx called by sn1
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248618] snull_release_buffer called by sn0
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248628] snull_regular_interrupt called by sn0
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248972] snull_header called by sn1
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.248995] snull_tx called by sn1, data : , len : 160 < ETH_ZLEN: 60
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249006] snull_hw_tx called by sn1, buf : , len : 160
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249015] Changing N/w ID of src & dest
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249028] snull_get_tx_buffer called by sn1
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249033] snull_enqueue_buf called by sn0
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249042] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249051] snull_regular_interrupt called by sn0
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249060] snull_rx called by sn0
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249074] snull_release_buffer called by sn1
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249084] snull_regular_interrupt called by sn1
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249402] snull_header called by sn1
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249423] snull_tx called by sn1, data : 33, len : 180 < ETH_ZLEN: 60
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249435] snull_hw_tx called by sn1, buf : 33, len : 180
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249443] Changing N/w ID of src & dest
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249456] snull_get_tx_buffer called by sn1
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249462] snull_enqueue_buf called by sn0
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249471] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249479] snull_regular_interrupt called by sn0
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249489] snull_rx called by sn0
+Dec  2 01:08:20 nitinsao-Aspire kernel: [ 8186.249502] snull_release_buffer called by sn1
+Dec  2 01:08:49 nitinsao-Aspire kernel: [ 8186.249512] snull_regular_interrupt called by sn1
+Dec  2 01:08:49 nitinsao-Aspire kernel: [ 8214.707805] snull_header called by sn0
+Dec  2 01:08:49 nitinsao-Aspire kernel: [ 8214.707859] snull_tx called by sn0, data : 33, len : 70 < ETH_ZLEN: 60
+Dec  2 01:08:49 nitinsao-Aspire kernel: [ 8214.708121] snull_hw_tx called by sn0, buf : 33, len : 70
+Dec  2 01:08:49 nitinsao-Aspire kernel: [ 8214.708134] Changing N/w ID of src & dest
+Dec  2 01:08:49 nitinsao-Aspire kernel: [ 8214.708151] snull_get_tx_buffer called by sn0
+Dec  2 01:08:49 nitinsao-Aspire kernel: [ 8214.708157] snull_enqueue_buf called by sn1
+Dec  2 01:08:49 nitinsao-Aspire kernel: [ 8214.708171] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:49 nitinsao-Aspire kernel: [ 8214.708184] snull_regular_interrupt called by sn1
+Dec  2 01:08:49 nitinsao-Aspire kernel: [ 8214.708197] snull_rx called by sn1
+Dec  2 01:08:49 nitinsao-Aspire kernel: [ 8214.708221] snull_release_buffer called by sn0
+Dec  2 01:08:51 nitinsao-Aspire gvfsd-network[3831]: Couldn't create directory monitor on smb://x-gnome-default-workgroup/. Error: The specified location is not mounted
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8214.708235] snull_regular_interrupt called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.262446] snull_header called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.262477] snull_tx called by sn0, data : , len : 160 < ETH_ZLEN: 60
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.262490] snull_hw_tx called by sn0, buf : , len : 160
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.262499] Changing N/w ID of src & dest
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.262513] snull_get_tx_buffer called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.262518] snull_enqueue_buf called by sn1
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.262528] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.262537] snull_regular_interrupt called by sn1
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.262546] snull_rx called by sn1
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.262561] snull_release_buffer called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.262571] snull_regular_interrupt called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.263214] snull_header called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.263236] snull_tx called by sn0, data : 33, len : 180 < ETH_ZLEN: 60
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.263247] snull_hw_tx called by sn0, buf : 33, len : 180
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.263256] Changing N/w ID of src & dest
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.263269] snull_get_tx_buffer called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.263275] snull_enqueue_buf called by sn1
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.263284] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.263293] snull_regular_interrupt called by sn1
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.263302] snull_rx called by sn1
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.263317] snull_release_buffer called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.263327] snull_regular_interrupt called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.263970] snull_header called by sn1
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.263994] snull_tx called by sn1, data : , len : 160 < ETH_ZLEN: 60
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264005] snull_hw_tx called by sn1, buf : , len : 160
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264014] Changing N/w ID of src & dest
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264027] snull_get_tx_buffer called by sn1
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264033] snull_enqueue_buf called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264042] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264051] snull_regular_interrupt called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264060] snull_rx called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264076] snull_release_buffer called by sn1
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264086] snull_regular_interrupt called by sn1
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264623] snull_header called by sn1
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264645] snull_tx called by sn1, data : 33, len : 180 < ETH_ZLEN: 60
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264657] snull_hw_tx called by sn1, buf : 33, len : 180
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264665] Changing N/w ID of src & dest
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264678] snull_get_tx_buffer called by sn1
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264683] snull_enqueue_buf called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264692] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264701] snull_regular_interrupt called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264711] snull_rx called by sn0
+Dec  2 01:08:52 nitinsao-Aspire kernel: [ 8218.264724] snull_release_buffer called by sn1
+Dec  2 01:08:53 nitinsao-Aspire kernel: [ 8218.264734] snull_regular_interrupt called by sn1
+Dec  2 01:08:53 nitinsao-Aspire kernel: [ 8218.805733] snull_header called by sn1
+Dec  2 01:08:53 nitinsao-Aspire kernel: [ 8218.805763] snull_tx called by sn1, data : 33, len : 70 < ETH_ZLEN: 60
+Dec  2 01:08:53 nitinsao-Aspire kernel: [ 8218.805776] snull_hw_tx called by sn1, buf : 33, len : 70
+Dec  2 01:08:53 nitinsao-Aspire kernel: [ 8218.805785] Changing N/w ID of src & dest
+Dec  2 01:08:53 nitinsao-Aspire kernel: [ 8218.805798] snull_get_tx_buffer called by sn1
+Dec  2 01:08:53 nitinsao-Aspire kernel: [ 8218.805804] snull_enqueue_buf called by sn0
+Dec  2 01:08:53 nitinsao-Aspire kernel: [ 8218.805813] Receive Interrupt Enabled in function snull_hw_tx
+Dec  2 01:08:53 nitinsao-Aspire kernel: [ 8218.805823] snull_regular_interrupt called by sn0
+Dec  2 01:08:53 nitinsao-Aspire kernel: [ 8218.805832] snull_rx called by sn0
+Dec  2 01:08:53 nitinsao-Aspire kernel: [ 8218.805849] snull_release_buffer called by sn1
+
+
+
+sudo ifconfig sn0 down
+sudo ifconfig sn1 down
+
+
+
+Dec  2 01:09:02 nitinsao-Aspire avahi-daemon[794]: Interface sn0.IPv6 no longer relevant for mDNS.
+Dec  2 01:09:02 nitinsao-Aspire avahi-daemon[794]: Leaving mDNS multicast group on interface sn0.IPv6 with address fe80::253:4eff:fe55:4c30.
+Dec  2 01:09:02 nitinsao-Aspire avahi-daemon[794]: Interface sn0.IPv4 no longer relevant for mDNS.
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8218.805859] snull_regular_interrupt called by sn1
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.844856] snull_release called by sn0
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.844899] snull_stats called by sn0
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.847279] snull_ioctl called by sn1
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.847318] snull_ioctl called by sn1
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.847534] snull_ioctl called by sn1
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.847564] snull_ioctl called by sn1
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.848935] snull_stats called by sn0
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.848963] snull_stats called by sn0
+Dec  2 01:09:02 nitinsao-Aspire avahi-daemon[794]: Leaving mDNS multicast group on interface sn0.IPv4 with address 192.168.0.1.
+Dec  2 01:09:02 nitinsao-Aspire avahi-daemon[794]: Withdrawing address record for fe80::253:4eff:fe55:4c30 on sn0.
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.848977] snull_stats called by sn1
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.851241] snull_release called by sn1
+Dec  2 01:09:02 nitinsao-Aspire avahi-daemon[794]: Withdrawing address record for 192.168.0.1 on sn0.
+Dec  2 01:09:02 nitinsao-Aspire avahi-daemon[794]: Interface sn1.IPv6 no longer relevant for mDNS.
+Dec  2 01:09:02 nitinsao-Aspire avahi-daemon[794]: Leaving mDNS multicast group on interface sn1.IPv6 with address fe80::253:4eff:fe55:4c31.
+Dec  2 01:09:02 nitinsao-Aspire avahi-daemon[794]: Interface sn1.IPv4 no longer relevant for mDNS.
+Dec  2 01:09:02 nitinsao-Aspire avahi-daemon[794]: Leaving mDNS multicast group on interface sn1.IPv4 with address 192.168.1.2.
+Dec  2 01:09:02 nitinsao-Aspire avahi-daemon[794]: Withdrawing address record for fe80::253:4eff:fe55:4c31 on sn1.
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.851265] snull_stats called by sn1
+
+
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.856237] mysnull_cleanup called###
+
+
+Dec  2 01:09:02 nitinsao-Aspire avahi-daemon[794]: Withdrawing address record for 192.168.1.2 on sn1.
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.856805] snull_header called by sn0
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.856922] snull_stats called by sn0
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.859461] snull_stats called by sn1
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.859483] snull_stats called by sn1
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.859580] snull_stats called by sn1
+
+
+Dec  2 01:09:02 nitinsao-Aspire NetworkManager[801]: <info>  [1512157142.3979] devices removed (path: /sys/devices/virtual/net/sn0, iface: sn0)
+
+
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.859597] snull_stats called by sn1
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.864800] snull_header called by sn1
+
+
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.873032] snull_teardown_pool called by sn0
+Dec  2 01:09:02 nitinsao-Aspire NetworkManager[801]: <info>  [1512157142.4162] devices removed (path: /sys/devices/virtual/net/sn1, iface: sn1)
+
+
+Dec  2 01:09:02 nitinsao-Aspire kernel: [ 8227.873616] snull_stats called by sn1
+

@@ -1,0 +1,434 @@
+  1 #include <linux/module.h>
+  2 #include <linux/init.h>
+  3 #include <linux/moduleparam.h>
+  4 
+  5 #include <linux/sched.h>
+  6 #include <linux/kernel.h> /* printk() */
+  7 #include <linux/slab.h> /* kmalloc() */
+  8 #include <linux/errno.h>  /* error codes */
+  9 #include <linux/types.h>  /* size_t */
+ 10 #include <linux/interrupt.h> /* mark_bh */
+ 11 
+ 12 #include <linux/in.h>
+ 13 #include <linux/netdevice.h>   /* struct device, and other headers */
+ 14 #include <linux/etherdevice.h> /* eth_type_trans */
+ 15 #include <linux/ip.h>          /* struct iphdr */
+ 16 #include <linux/tcp.h>         /* struct tcphdr */
+ 17 #include <linux/skbuff.h>
+ 18 
+ 19 #include <asm/checksum.h>
+ 20 
+ 21 /* These are the flags in the statusword */
+ 22 #define SN_RX_INTR 0x0001
+ 23 #define SN_TX_INTR 0x0002
+ 24 
+ 25 /* Default timeout period */
+ 26 #define SN_TIMEOUT 5   /* In jiffies */
+ 27 
+ 28 
+ 29 MODULE_AUTHOR("Simple Network Devlopers");
+ 30 MODULE_LICENSE("Dual BSD/GPL");
+ 31 
+ 32 static int timeout = SN_TIMEOUT;
+ 33 
+ 34 /*
+ 35  * The devices
+ 36  */
+ 37 struct net_device *sn_devs;
+ 38 
+ 39 int pool_size = 8;                                              // pool size for packets per dev
+ 40 module_param(pool_size, int, 0);
+ 41 
+ 42 //static void (*sn_interrupt)(int, void *, struct pt_regs *);
+ 43 
+ 44 struct sn_packet {
+ 45         struct sn_packet *next;
+ 46         struct net_device *dev;
+ 47         int     datalen;
+ 48         u8 data[ETH_DATA_LEN];                  // ETH_DATA_LEN = 1500 octets (MTU)
+ 49 };
+ 50 
+ 51 struct sn_priv {
+ 52         struct net_device *dev;
+ 53         struct napi_struct napi;
+ 54         struct net_device_stats stats;
+ 55         int status;
+ 56         struct sn_packet *ppool;
+ 57         struct sn_packet *rx_queue;  /* List of incoming packets */
+ 58         int rx_int_enabled;
+ 59         int tx_packetlen;
+ 60         u8 *tx_packetdata;
+ 61         struct sk_buff *skb;
+ 62         spinlock_t lock;
+ 63 };
+ 64 
+ 65 
+ 66 static void sn_rx_ints(struct net_device *dev, int enable)
+ 67 {
+ 68         struct sn_priv *priv = netdev_priv(dev);
+ 69         priv->rx_int_enabled = enable;
+ 70         printk(KERN_ALERT "%s called", __FUNCTION__);
+ 71 }
+ 72 
+ 73 void sn_setup_pool(struct net_device *dev)
+ 74 {
+ 75         struct sn_priv *priv = netdev_priv(dev);
+ 76         int i;
+ 77         struct sn_packet *pkt;
+ 78 
+ 79         priv->ppool = NULL;
+ 80         for (i = 0; i < pool_size; i++) {
+ 81                 pkt = kmalloc (sizeof (struct sn_packet), GFP_KERNEL);
+ 82                 if (pkt == NULL) {
+ 83                         printk (KERN_NOTICE "Ran out of memory allocating packet pool\n");
+ 84                         return;
+ 85                 }
+ 86                 pkt->dev = dev;
+ 87                 pkt->next = priv->ppool;
+ 88                 priv->ppool = pkt;
+ 89         }
+ 90 }
+ 91 
+ 92 int sn_open(struct net_device *dev)
+ 93 {
+ 94         memcpy(dev->dev_addr, "\0SNUL0", ETH_ALEN);
+ 95         netif_start_queue(dev);
+ 96         return 0;
+ 97 }
+ 98 
+ 99 int sn_release(struct net_device *dev)
+100 {
+101         netif_stop_queue(dev); /* can't transmit any more */
+102         return 0;
+103 }
+104 
+105 struct sn_packet *sn_get_tx_buffer(struct net_device *dev)
+106 {
+107         struct sn_priv *priv = netdev_priv(dev);
+108         unsigned long flags;
+109         struct sn_packet *pkt;
+110 
+111         spin_lock_irqsave(&priv->lock, flags);
+112         pkt = priv->ppool;
+113         priv->ppool = pkt->next;
+114         if (priv->ppool == NULL) {
+115                 printk (KERN_INFO "Pool empty\n");
+116                 netif_stop_queue(dev);
+117         }
+118         spin_unlock_irqrestore(&priv->lock, flags);
+119         return pkt;
+120 }
+121 
+122 void sn_enqueue_buf(struct net_device *dev, struct sn_packet *pkt)
+123 {
+124         unsigned long flags;
+125         struct sn_priv *priv = netdev_priv(dev);
+126 
+127         spin_lock_irqsave(&priv->lock, flags);
+128         pkt->next = priv->rx_queue;  /* FIXME - misorders packets */
+129         priv->rx_queue = pkt;
+130         spin_unlock_irqrestore(&priv->lock, flags);
+131 }
+132 
+133 void sn_rx(struct net_device *dev, struct sn_packet *pkt)
+134 {
+135         struct sk_buff *skb;
+136         struct sn_priv *priv = netdev_priv(dev);
+137 
+138         skb = dev_alloc_skb(pkt->datalen + 2);
+139         if (!skb) {
+140                 if (printk_ratelimit())
+141                         printk(KERN_NOTICE "sn rx: low on mem - packet dropped\n");
+142                 priv->stats.rx_dropped++;
+143                 goto out;
+144         }
+145         skb_reserve(skb, 2); /* align IP on 16B boundary */
+146         memcpy(skb_put(skb, pkt->datalen), pkt->data, pkt->datalen);
+147 
+148         /* Write metadata, and then pass to the receive level */
+149         skb->dev = dev;
+150         skb->protocol = eth_type_trans(skb, dev);
+151         skb->ip_summed = CHECKSUM_UNNECESSARY; /* don't check it */
+152         priv->stats.rx_packets++;
+153         priv->stats.rx_bytes += pkt->datalen;
+154         netif_rx(skb);
+155   out:
+156         return;
+157 }
+158 
+159 void sn_release_buffer(struct sn_packet *pkt)
+160 {
+161         unsigned long flags;
+162         struct sn_priv *priv = netdev_priv(pkt->dev);
+163 
+164         spin_lock_irqsave(&priv->lock, flags);
+165         pkt->next = priv->ppool;
+166         priv->ppool = pkt;
+167         spin_unlock_irqrestore(&priv->lock, flags);
+168         if (netif_queue_stopped(pkt->dev) && pkt->next == NULL)
+169                 netif_wake_queue(pkt->dev);
+170 }
+171 
+172 static void sn_interrupt(int irq, void *dev_id, struct pt_regs *regs)
+173 {
+174         int statusword;
+175         struct sn_priv *priv;
+176         struct sn_packet *pkt = NULL;
+177 
+178 
+179         struct net_device *dev = (struct net_device *)dev_id;
+180 
+181 
+182         if (!dev)
+183                 return;
+184 
+185         /* Lock the device */
+186         priv = netdev_priv(dev);
+187         spin_lock(&priv->lock);
+188 
+189         /* retrieve statusword: real netdevices use I/O instructions */
+190         statusword = priv->status;
+191         priv->status = 0;
+192         if (statusword & SN_RX_INTR) {
+193                 /* send it to sn_rx for handling */
+194                 pkt = priv->rx_queue;
+195                 if (pkt) {
+196                         priv->rx_queue = pkt->next;
+197                         sn_rx(dev, pkt);
+198                 }
+199         }
+200         if (statusword & SN_TX_INTR) {
+201                 /* a transmission is over: free the skb */
+202                 priv->stats.tx_packets++;
+203                 priv->stats.tx_bytes += priv->tx_packetlen;
+204                 dev_kfree_skb(priv->skb);
+205         }
+206 
+207         /* Unlock the device and we are done */
+208         spin_unlock(&priv->lock);
+209         if (pkt) sn_release_buffer(pkt); /* Do this outside the lock! */
+210         return;
+211 }
+212 
+213 static void sn_hw_tx(char *buf, int len, struct net_device *dev)
+214 {
+215         struct iphdr *ih;
+216         struct net_device *dest;
+217         struct sn_priv *priv;
+218         u32 *saddr, *daddr;
+219         struct sn_packet *tx_buffer;
+220 
+221 
+222         if (len < sizeof(struct ethhdr) + sizeof(struct iphdr)) {
+223                 printk("sn: Hmm... packet too short (%i octets)\n",
+224                                 len);
+225                 return;
+226         }
+227 
+228         ih = (struct iphdr *)(buf+sizeof(struct ethhdr));
+229         saddr = &ih->saddr;
+230         daddr = &ih->daddr;
+231 
+232         printk(KERN_ALERT "src : %d.%d.%d.%d", ((u8 *)saddr)[0], ((u8 *)saddr)[1], ((u8 *)saddr)[2], ((u8 *)saddr)[3]);
+233         printk(KERN_ALERT "dest : %d.%d.%d.%d\n", ((u8 *)daddr)[0], ((u8 *)daddr)[1], ((u8 *)daddr)[2], ((u8 *)daddr)[3]);
+234 
+235         ((u8 *)saddr)[3] ^= 3; /* change the fourth octet (class C) */
+236         ((u8 *)daddr)[3] ^= 3;
+237         printk(KERN_ALERT "new src : %d.%d.%d.%d", ((u8 *)saddr)[0], ((u8 *)saddr)[1], ((u8 *)saddr)[2], ((u8 *)saddr)[3]);
+238         printk(KERN_ALERT "new dest : %d.%d.%d.%d\n\n", ((u8 *)daddr)[0], ((u8 *)daddr)[1], ((u8 *)daddr)[2], ((u8 *)daddr)[3]);
+239 
+240 
+241         ih->check = 0;         /* and rebuild the checksum (ip needs it) */
+242         ih->check = ip_fast_csum((unsigned char *)ih,ih->ihl);
+243 
+244         dest = dev;
+245         priv = netdev_priv(dest);
+246         tx_buffer = sn_get_tx_buffer(dev);
+247         tx_buffer->datalen = len;
+248         memcpy(tx_buffer->data, buf, len);
+249         sn_enqueue_buf(dest, tx_buffer);
+250         if (priv->rx_int_enabled) {
+251                 priv->status |= SN_RX_INTR;
+252                 sn_interrupt(0, dest, NULL);
+253         }
+254 
+255         priv = netdev_priv(dev);
+256         priv->tx_packetlen = len;
+257         priv->tx_packetdata = buf;
+258         priv->status |= SN_TX_INTR;
+259 
+260         sn_interrupt(0, dev, NULL);
+261 }
+262 
+263 int sn_tx(struct sk_buff *skb, struct net_device *dev)
+264 {
+265         int len;
+266         char *data, shortpkt[ETH_ZLEN];
+267         struct sn_priv *priv = netdev_priv(dev);
+268 
+269         data = skb->data;
+270         len = skb->len;
+271         if (len < ETH_ZLEN) {
+272                 memset(shortpkt, 0, ETH_ZLEN);
+273                 memcpy(shortpkt, skb->data, skb->len);
+274                 len = ETH_ZLEN;
+275                 data = shortpkt;
+276         }
+277 
+278         /* Remember the skb, so we can free it at interrupt time */
+279         priv->skb = skb;
+280 
+281         /* actual deliver of data is device-specific, and not shown here */
+282         sn_hw_tx(data, len, dev);
+283 
+284         return 0; /* Our simple device can not fail */
+285 }
+286 
+287 void sn_tx_timeout (struct net_device *dev)
+288 {
+289         struct sn_priv *priv = netdev_priv(dev);
+290 
+291         /* Simulate a transmission interrupt to get things moving */
+292         priv->status = SN_TX_INTR;
+293         sn_interrupt(0, dev, NULL);
+294         priv->stats.tx_errors++;
+295         netif_wake_queue(dev);
+296         return;
+297 }
+298 
+299 struct net_device_stats *sn_stats(struct net_device *dev)
+300 {
+301         struct sn_priv *priv = netdev_priv(dev);
+302         return &priv->stats;
+303 }
+304 
+305 int sn_config(struct net_device *dev, struct ifmap *map)
+306 {
+307         if (dev->flags & IFF_UP) /* can't act on a running interface */
+308                 return -EBUSY;
+309 
+310         /* Don't allow changing the I/O address */
+311         if (map->base_addr != dev->base_addr) {
+312                 printk(KERN_WARNING "sn: Can't change I/O address\n");
+313                 return -EOPNOTSUPP;
+314         }
+315 
+316         /* Allow changing the IRQ */
+317         if (map->irq != dev->irq) {
+318                 dev->irq = map->irq;
+319                 /* request_irq() is delayed to open-time */
+320         }
+321 
+322         /* ignore other fields */
+323         return 0;
+324 }
+325 
+326 int sn_ioctl(struct net_device *dev, struct ifreq *rq, int cmd)
+327 {
+328         printk(KERN_ALERT "ioctl\n");
+329         return 0;
+330 }
+331 
+332 static const struct net_device_ops sn_netdev_ops = {
+334         .ndo_stop               = sn_release,
+335         .ndo_set_config         = sn_config,
+336         .ndo_start_xmit         = sn_tx,
+337         .ndo_do_ioctl           = sn_ioctl,
+338         .ndo_get_stats          = sn_stats,
+339         .ndo_tx_timeout         = sn_tx_timeout,
+340 };
+341 
+342 int sn_header(struct sk_buff *skb, struct net_device *dev,
+343                 unsigned short type, const void *daddr, const void *saddr,
+344                 unsigned len)
+345 {
+346         struct ethhdr *eth = (struct ethhdr *)skb_push(skb,ETH_HLEN);
+347 
+348         eth->h_proto = htons(type);
+349         memcpy(eth->h_source, saddr ? saddr : dev->dev_addr, dev->addr_len);
+350         memcpy(eth->h_dest,   daddr ? daddr : dev->dev_addr, dev->addr_len);
+351         eth->h_dest[ETH_ALEN-1]   ^= 0x01;   /* dest is us xor 1 */
+352         return (dev->hard_header_len);
+353 }
+354 
+355 static const struct header_ops sn_header_ops = {
+356         .create         = sn_header,
+357         .cache          = NULL,
+358 };
+359 
+360 void sn_init(struct net_device *dev)
+361 {
+362         struct sn_priv *priv;
+363 
+364         priv = netdev_priv(dev);
+365         memset(priv, 0, sizeof(struct sn_priv));
+366         spin_lock_init(&priv->lock);
+367         priv->dev = dev;
+368 
+369 
+370         ether_setup(dev); /* assign some of the fields */
+371 
+372         dev->watchdog_timeo = timeout;
+373 
+374 
+375         /* keep the default flags, just add NOARP */
+376         dev->flags           |= IFF_NOARP;
+377         dev->features        |= NETIF_F_HW_CSUM;
+378         dev->netdev_ops = &sn_netdev_ops;
+379         dev->header_ops = &sn_header_ops;
+380 
+381         sn_rx_ints(dev, 1);             /* enable receive interrupts */
+382         sn_setup_pool(dev);
+383 }
+384 
+385 void sn_cleanup(void);
+386 
+387 int sn_init_module(void)
+388 {
+389         int result, ret = -ENOMEM;
+390 
+391 
+392 
+393         /* Allocate the devices */
+394         sn_devs = alloc_netdev(sizeof(struct sn_priv), "sn", NET_NAME_UNKNOWN,
+395                         sn_init);
+396 
+397         if (sn_devs == NULL)
+398                 goto out;
+399 
+400         ret = -ENODEV;
+401         if ((result = register_netdev(sn_devs)))
+402                 printk("sn: error %i registering device \"%s\"\n",
+403                                 result, sn_devs->name);
+404         else
+405                 ret = 0;
+406    out:
+407         if (ret)
+408                 sn_cleanup();
+409         return ret;
+410 }
+411 
+412 void sn_teardown_pool(struct net_device *dev)
+413 {
+414         struct sn_priv *priv = netdev_priv(dev);
+415         struct sn_packet *pkt;
+416 
+417         while ((pkt = priv->ppool)) {
+418                 priv->ppool = pkt->next;
+419                 kfree (pkt);
+420         }
+421 }
+422 
+423 void sn_cleanup(void)
+424 {
+425         if (sn_devs) {
+426                 unregister_netdev(sn_devs);
+427                 sn_teardown_pool(sn_devs);
+428                 free_netdev(sn_devs);
+429         }
+430         return;
+431 }
+432 
+433 
+434 module_init(sn_init_module);
+435 module_exit(sn_cleanup);
